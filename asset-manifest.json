@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/recipe-generator/static/css/main.e6c13ad2.css",
+    "main.js": "/recipe-generator/static/js/main.93a09383.js",
+    "static/js/787.c0a24de9.chunk.js": "/recipe-generator/static/js/787.c0a24de9.chunk.js",
+    "index.html": "/recipe-generator/index.html",
+    "main.e6c13ad2.css.map": "/recipe-generator/static/css/main.e6c13ad2.css.map",
+    "main.93a09383.js.map": "/recipe-generator/static/js/main.93a09383.js.map",
+    "787.c0a24de9.chunk.js.map": "/recipe-generator/static/js/787.c0a24de9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.93a09383.js"
+  ]
+}

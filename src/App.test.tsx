@@ -1,9 +1,21 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
+import { configureStore } from '@reduxjs/toolkit';
+import selectedIngredientsReducer from './reducers/selectedIngredientsReducer';
+import { Provider } from 'react-redux';
 
-test('renders learn react link', () => {
-    render(<App />);
-    const linkElement = screen.getByText(/learn react/i);
+test('renders page', () => {
+    const store = configureStore({
+        reducer: {
+            selectedIngredients: selectedIngredientsReducer,
+        },
+    });
+
+    render(
+        <Provider store={store}>
+            <App />
+        </Provider>
+    );
+    const linkElement = screen.getByText(/Recipe Generator/i);
     expect(linkElement).toBeInTheDocument();
 });

@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Recipe Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Sample React project which uses the themealdb API in order to find recipes based on available ingredients. [Demo available here](https://rbrigdale.github.io/recipe-generator/).
 
 ## Available Scripts
 

@@ -2,6 +2,16 @@
 
 Sample React project which uses the themealdb API in order to find recipes based on available ingredients. [Demo available here](https://rbrigdale.github.io/recipe-generator/).
 
+## Demo
+
+Image displaying search field & resulst:
+
+![1](https://github.com/rbrigdale/recipe-generator/blob/master/public/recipe-gen-1.jpg)
+
+Image displaying recipe detail modal:
+
+![2](https://github.com/rbrigdale/recipe-generator/blob/master/public/recipe-gen-2.jpg)
+
 ## Available Scripts
 
 In the project directory, you can run:

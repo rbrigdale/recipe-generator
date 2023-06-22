@@ -51,19 +51,20 @@ describe('RecipeList', () => {
     });
 
     test('should render a recipe card when a recipe is found', async () => {
-        jest.spyOn(global, 'fetch').mockImplementation(() =>
-            Promise.resolve({
-                json: () =>
-                    Promise.resolve({
-                        meals: [
-                            {
-                                strMeal: 'chicken meal name',
-                                strMealThumb: 'chicken',
-                                idMeal: '1234',
-                            },
-                        ],
-                    }),
+        const mockResponse = new Response(
+            JSON.stringify({
+                meals: [
+                    {
+                        strMeal: 'chicken meal name',
+                        strMealThumb: 'chicken',
+                        idMeal: '1234',
+                    },
+                ],
             })
+        );
+
+        jest.spyOn(global, 'fetch').mockImplementation(() =>
+            Promise.resolve(mockResponse)
         );
 
         const store = configureStore({

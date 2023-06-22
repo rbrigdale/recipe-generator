@@ -15,25 +15,25 @@ describe('RecipeModal', () => {
     });
 
     test('should test api call', async () => {
-        jest.spyOn(global, 'fetch').mockImplementation(() =>
-            Promise.resolve({
-                json: () =>
-                    Promise.resolve({
-                        meals: [
-                            {
-                                idMeal: '52772',
-                                strMeal: 'Beef and Mustard Pie',
-                                strInstructions:
-                                    'This is a test for instructions',
-                                strMealThumb: '',
-                                strIngredient1: 'Beef',
-                                strIngredient2: 'Mustard',
-                                strMeasure1: '1 Steak',
-                                strMeasure2: '1bsp',
-                            },
-                        ],
-                    }),
+        const mockResponse = new Response(
+            JSON.stringify({
+                meals: [
+                    {
+                        idMeal: '52772',
+                        strMeal: 'Beef and Mustard Pie',
+                        strInstructions: 'This is a test for instructions',
+                        strMealThumb: '',
+                        strIngredient1: 'Beef',
+                        strIngredient2: 'Mustard',
+                        strMeasure1: '1 Steak',
+                        strMeasure2: '1bsp',
+                    },
+                ],
             })
+        );
+
+        jest.spyOn(global, 'fetch').mockImplementation(() =>
+            Promise.resolve(mockResponse)
         );
 
         render(<RecipeModal open={true} close={() => {}} recipeId="52772" />);
